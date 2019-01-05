@@ -46,6 +46,5 @@ repositories {
 
 dependencies {
     implementation 'com.facebook.react:react-native:+'
-    // From node_modules
-    implementation project(':YouTubeAndroidPlayerApi')
+    compile files('YouTubeAndroidPlayerApi.jar')
 }
