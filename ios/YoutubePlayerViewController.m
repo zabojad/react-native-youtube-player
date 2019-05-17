@@ -48,7 +48,14 @@
     }
 }
 
+- (void)videoExitFullScreen
+{
+    // NSLog(@"videoExitFullScreen");
+    [[UIApplication sharedApplication] setStatusBarHidden:NO animated:YES];
+}
+
 - (void)viewWillDisappear:(BOOL)animated {
+    [self videoExitFullScreen];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:@"AVPlayerItemBecameCurrentNotification" object:nil];
 }
 
